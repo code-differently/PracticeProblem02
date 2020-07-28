@@ -22,12 +22,7 @@ public class LargestContiguousSubArrayLength {
         int maxLength = 0;
 
         for(int index = 1; index < array.length; index++) {
-            if(array[index] - 1 == currentNumber) {
-                currentLength++;
-            }
-            else {
-                currentLength = 1;
-            }
+            currentLength = array[index] - 1 == currentNumber ? currentLength + 1 : 1;
             maxLength = Math.max(currentLength, maxLength);
             currentNumber = array[index];
         }
