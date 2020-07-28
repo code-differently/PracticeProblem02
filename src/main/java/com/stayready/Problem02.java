@@ -5,19 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import javax.swing.plaf.synth.SynthFormattedTextFieldUI;
 
 public class Problem02 {
-
-    /*Game plan
-
-    sort the array into arraylist
-
-    with each consecutive step it increases count
-
-    if the number is bad, save and reset count
-
-    */
 
 
 
@@ -49,14 +38,15 @@ public class Problem02 {
                 if(chainCnt + 1 > maxChain){ //new record
 
                     maxChain = chainCnt + 1;
-                    
 
+                    //IMPORTENT: +1 accounts for the current value itself!!
+                
                 }
 
                 
             }else{
                 
-                chainCnt = 0; //reset
+                chainCnt = 0; //reset. Makes it possible for zero matches.
             }
 
         }
