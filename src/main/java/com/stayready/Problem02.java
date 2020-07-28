@@ -15,14 +15,6 @@ public class Problem02 {
     }
 
         
-    //find min and max of elements, original idea
-        int min(int x, int y){
-            return (x < y) ? x : y;
-        }
-
-        int max(int x, int y){
-            return (x > y) ? x : y;
-        }
 
     public int findLongestSubarray(int[] arr){
 
