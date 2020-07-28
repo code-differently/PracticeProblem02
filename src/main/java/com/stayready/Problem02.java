@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class Problem02 {
 
+    /**
+     * @param array an array to check for the longest continous subarray
+     * @return A string with the longest continous subarray
+     */
     static String getContinuousSubarray(int[] array){
         Arrays.sort(array); // Sort Array from least to greatest
         int largestCount=0; // Hold largest number of continuous numbers

@@ -133,4 +133,17 @@ public class Problem02Test {
         // Then
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void getContinousSubarrayTest11(){
+        // Given
+        int[] fix={1,1,1,1};
+        String expected="Length of the longest contiguous subarray is 1";
+
+        // When
+        String actual=Problem02.getContinuousSubarray(fix);
+
+        // Then
+        Assert.assertEquals(expected,actual);
+    }
 }
