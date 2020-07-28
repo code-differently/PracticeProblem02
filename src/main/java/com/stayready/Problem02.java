@@ -2,6 +2,8 @@ package com.stayready;
 
 import java.util.Arrays;
 
+//You can only review this code while listening to "Wit it" - Chief Keef
+
 public class Problem02 {
     public int[] sortArray(int[] starterRay){
         Arrays.sort(starterRay);
