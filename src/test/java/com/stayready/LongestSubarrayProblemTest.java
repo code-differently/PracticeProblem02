@@ -1,30 +1,32 @@
 package com.stayready;
 
-import java.lang.annotation.Target;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 public class LongestSubarrayProblemTest {
 
     @Test
-    public void sortArrayTest(){
+    public void longestContinuityTest(){
         //Given
-        LongestSubarrayProblem test = new LongestSubarrayProblem();
+        int[] sequence = {100, 1, 4, 55, 3, 2};
+        int expected = 4;
 
         //When
+        int actual = LongestSubarrayProblem.longestContinuity(sequence);
 
         //Then
-
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void minNumTest(){
-        
+    public void longestContinuityTest2(){
+        int[] sequence = {13, 14, 8, 9, 20, 21, 15, 16};
+        int expected = 4;
 
-    }
+        //When
+        int actual = LongestSubarrayProblem.longestContinuity(sequence);
 
-    @Test
-    public void maxNumTest(){
-
+        //Then
+        Assert.assertEquals(expected, actual);
     }
 }

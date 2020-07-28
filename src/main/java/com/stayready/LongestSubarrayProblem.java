@@ -1,24 +1,27 @@
 package com.stayready;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class LongestSubarrayProblem {
 
-    /**
-     * @param takes in an integer array
-     * @return an array sorted in ascending order
-     */
+  public static int longestContinuity(int[] array){
+    Arrays.sort(array);
 
-    public Integer[] sortArray(Integer[] array){
-        Arrays.sort(array);
-        return array;
-    }
+    int longestSequence = 1;
+    int currentSequence = 1;
 
-    int minimumNum(int x, int y){
-        return (x < y) ? x : y;
+    for (int i = 1; i < array.length; i++) {
+        if (array[i] != array[i-1]) {
+            if (array[i] == array[i-1]+1) {
+                currentSequence += 1;
+            }
+            else {
+                longestSequence = Math.max(longestSequence, currentSequence);
+                currentSequence = 1;
+            }
+        }
     }
-
-    int maximumNum(int x, int y){
-        return (x > y) ? x : y;
-    }
+    return Math.max(longestSequence, currentSequence);
+}
 }
