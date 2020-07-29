@@ -15,12 +15,16 @@ public class Problem02 {
             if(array[i+1] == array[i]+1){
                 count++;
             }else{
-                if(count > maxCount)
-                    maxCount = count;
-                    count = 1;
+                maxCount = Problem02.checkMaxCount(count, maxCount);
+                count = 1;
             }
-        }if(count > maxCount)
-            maxCount = count;
+        }maxCount = checkMaxCount(count, maxCount);
         return "Length of the longest contiguous subarray is "+ maxCount;
+    }
+
+    public static int checkMaxCount(int count, int max){
+        if(count > max) {
+            max = count;
+        }return max;
     }
 }

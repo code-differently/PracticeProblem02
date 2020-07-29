@@ -45,6 +45,32 @@ public class Problem02Test {
         Assert.assertEquals(expected,actual);
     }
 
+    @Test
+    public void checkMaxCountTest(){
+        //Given
+        int count = 3;
+        int maxCount = 5;
+        //Expected
+        int expected = 5;
+        int actual = Problem02.checkMaxCount(count,maxCount);
+
+        //
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void checkMaxCountTest2(){
+        //Given
+        int count = 3;
+        int maxCount = 1;
+        //Expected
+        int expected = 3;
+        int actual = Problem02.checkMaxCount(count,maxCount);
+
+        //
+        Assert.assertEquals(expected,actual);
+    }
+
 
 
 
