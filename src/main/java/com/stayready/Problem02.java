@@ -23,10 +23,4 @@ public class Problem02 {
             maxCount = count;
         return "Length of the longest contiguous subarray is "+ maxCount;
     }
-
-//    private int Compare(int max, int count){
-//        if(count > max)
-//            max = count;
-//        return max;
-//    }
 }
