@@ -14,13 +14,11 @@ public class Problem02 {
             if (arr[i+1] == arr[i]+1) {
                 count++;
             } else {
-                if (count > maxCount){
+                if (count > maxCount)
                     maxCount = count;
                     count = 1;
-                }
             }
-        }
-        if  (count > maxCount) {
+        } if (count > maxCount) {
             maxCount = count;
         }
         return result + maxCount;
